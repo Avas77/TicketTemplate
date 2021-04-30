@@ -39,6 +39,11 @@
         padding: 2px 7px;
         color: #eca911;
       }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
     </style>
   </head>
   <body>
@@ -59,9 +64,8 @@
       Tickets
     </div>
     <div
+      class="clearfix"
       style="
-        display: flex;
-        justify-content: space-between;
         margin: 30px 76px 0 42px;
         color: #393838;
         font-size: 18px;
@@ -69,8 +73,12 @@
         letter-spacing: 0.14px;
       "
     >
-      <div class="total">Total 10</div>
-      <div class="date">19/04/2021- 19/05/2021</div>
+      <div class="total" style="display: inline-block; width: 50%">
+        Total 10
+      </div>
+      <div class="date" style="width: 50%; float: right; text-align: right">
+        19/04/2021- 19/05/2021
+      </div>
     </div>
     <table style="width: 100%; padding: 20px 30px 0 30px; text-align: center">
       <tr style="font-size: 14px; line-height: 22px; color: #919191">
@@ -89,26 +97,29 @@
         <td>Broken tv, fallen from tv stand</td>
         <td>12, Apr 2021</td>
         <td>13, Apr 2021</td>
-        <td style="display: flex; justify-content: space-around">
-          <img
-            src="icons/red-arrow.svg"
-            alt=""
-            style="align-self: center"
-          /><span>High</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <img src="icons/red-arrow.svg" alt="" />
+          </div>
+          <span style="margin-left: 8px">High</span>
         </td>
         <td><span class="status-start">STARTED</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/ceo.jpg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -125,18 +136,22 @@
           /><span>Highest</span>
         </td>
         <td><span class="status-todo">TODO</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/team.jpg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -153,18 +168,22 @@
           /><span>Medium</span>
         </td>
         <td><span class="status-todo">TODO</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -181,18 +200,22 @@
           /><span>Highest</span>
         </td>
         <td><span class="status-start">STARTED</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -209,18 +232,22 @@
           /><span>Lowest</span>
         </td>
         <td><span class="status-todo">TODO</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Tester</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -231,24 +258,29 @@
         <td>13, Apr 2021</td>
         <td style="display: flex; justify-content: space-around">
           <img
-            src="icons/red-arrow.svg"
+            src="icons/orange-arrow1.svg"
             alt=""
             style="align-self: center"
-          /><span>High</span>
+          />
+          <span>High</span>
         </td>
         <td><span class="status-start">STARTED</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -265,18 +297,22 @@
           /><span>Lowest</span>
         </td>
         <td><span class="status-todo">TODO</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Tester</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -287,24 +323,29 @@
         <td>13, Apr 2021</td>
         <td style="display: flex; justify-content: space-around">
           <img
-            src="icons/red-arrow.svg"
+            src="icons/orange-arrow1.svg"
             alt=""
             style="align-self: center"
-          /><span>High</span>
+          />
+          <span>High</span>
         </td>
         <td><span class="status-start">STARTED</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
       <tr>
@@ -321,18 +362,22 @@
           /><span>Medium</span>
         </td>
         <td><span class="status-todo">TODO</span></td>
-        <td style="display: flex; justify-content: center">
-          <img
-            style="
-              align-self: center;
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
-              border-radius: 50%;
-            "
-            src="icons/user2.svg"
-            alt=""
-          /><span>Rinesh Shakya</span>
+        <td style="display: table">
+          <div style="display: table-cell; vertical-align: middle">
+            <div
+              style="
+                display: inline-block;
+                margin-right: 8px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <img style="width: 100%" src="icons/ceo.jpg" alt="" />
+            </div>
+          </div>
+          <span>Rinesh Shakya</span>
         </td>
       </tr>
     </table>
